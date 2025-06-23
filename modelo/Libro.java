@@ -8,10 +8,7 @@ public class Libro {
     private int anio;
     private boolean disponible;
 
-    // Constructor vacío (opcional)
-    public Libro() {}
-
-    // Constructor con parámetros
+    // Constructor sin ID (para crear nuevos)
     public Libro(String titulo, String autor, String editorial, int anio, boolean disponible) {
         this.titulo = titulo;
         this.autor = autor;
@@ -20,53 +17,32 @@ public class Libro {
         this.disponible = disponible;
     }
 
-    // Getters
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public String getEditorial() {
-        return editorial;
-    }
-
-    public int getAnio() {
-        return anio;
-    }
-
-    public boolean isDisponible() {
-        return disponible;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    // Setters
-    public void setTitulo(String titulo) {
+    // ✅ Constructor CON ID (para editar / listar)
+    public Libro(int id, String titulo, String autor, String editorial, int anio, boolean disponible) {
+        this.id = id;
         this.titulo = titulo;
-    }
-
-    public void setAutor(String autor) {
         this.autor = autor;
-    }
-
-    public void setEditorial(String editorial) {
         this.editorial = editorial;
-    }
-
-    public void setAnio(int anio) {
         this.anio = anio;
-    }
-
-    public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    // Getters y Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+
+    public String getAutor() { return autor; }
+    public void setAutor(String autor) { this.autor = autor; }
+
+    public String getEditorial() { return editorial; }
+    public void setEditorial(String editorial) { this.editorial = editorial; }
+
+    public int getAnio() { return anio; }
+    public void setAnio(int anio) { this.anio = anio; }
+
+    public boolean isDisponible() { return disponible; }
+    public void setDisponible(boolean disponible) { this.disponible = disponible; }
 }
