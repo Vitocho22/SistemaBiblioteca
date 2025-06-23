@@ -45,4 +45,12 @@ public class Libro {
 
     public boolean isDisponible() { return disponible; }
     public void setDisponible(boolean disponible) { this.disponible = disponible; }
+
+    @Override
+    public String toString() {
+        return id + " - " + titulo;
+    }
+
 }
+
+
